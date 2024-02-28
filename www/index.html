@@ -7,11 +7,69 @@
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+   h2{
+   color:#836FFF;
+   border: 1px solid #3498db;
+   padding: 5px;
+      border-radius: 10px;
+     }
+
+    </style>
     <script>
+
+            var numero01, numero02, resultado 
+
+function somar(){
+                numero01 = parseInt(document.getElementById('numero01').value)
+                numero02 = parseInt(document.getElementById('numero02').value)
+
+                resultado = numero01 + numero02
+
+                document.getElementById('visor').innerHTML = resultado
+            } 
+
+function multiplicar(){
+       numero01=parseInt(document.getElementById('numero01').value) 
+       numero02=parseInt(document.getElementById('numero02').value) 
+
+            resultado = numero01 * numero02 
+     
+     document.getElementById('visor').innerHTML = resultado }
+
+function dividir(){  
+        numero01=parseInt(document.getElementById('numero01').value)
+        numero02=parseInt(document.getElementById('numero02').value) 
+
+            resultado = numero01 / numero02 
+
+          document.getElementById('visor').innerHTML = resultado }
+
+function subtrair(){ 
+       numero01=parseInt(document.getElementById('numero01').value) 
+        numero02=parseInt(document.getElementById('numero02').value)
+
+     resultado = numero01 - numero02 
+
+     document.getElementById('visor').innerHTML = resultado }
+         
+        
     </script>
 </head>
 <body>
-	<br />
-    This is a template for Monaca app.
-</body>
-</html>
+
+    <h2>Resultado da Conta</h2> 
+    <h3 id="visor"></h3> 
+
+    <h2>Calculadora</h2> <p>
+    <input type="number" placeholder="Insira o Primeiro Numero" id="numero01">
+    <input type="number" placeholder="Insira o Segundo Numero" id="numero02">
+    <br></p> 
+
+    <input type ="button" value="somar" onclick="somar()" > 
+    <input type ="button" value="multiplicar" onclick="multiplicar()" > 
+    <input type ="button" value="dividir" onclick="dividir()" > 
+    <input type ="button" value="subtrair" onclick="subtrair()" >  
+
+    </body> 
+    </html>
